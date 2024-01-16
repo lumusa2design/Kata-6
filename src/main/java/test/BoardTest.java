@@ -24,7 +24,11 @@ public class BoardTest {
         assertThat(board.state()).isEqualTo(Cases.oneDeadCell);
     }
 
-
+    @Test
+    public void return_2x2_all_dead_cells_given_2x2_alive_cells(){
+        Board board = new Board(Cases.allDeadCells2x2).next();
+        assertThat(board.state()).isEqualTo(Cases.allAliveCells2x2);
+    }
 
     @Test
     public void return_2x2_all_alive_cells_given_2x2_alive_cells(){
